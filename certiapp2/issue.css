@@ -1,0 +1,48 @@
+.icbutton{
+    background-color: #64CDEA;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    width: 120px;
+}
+.hbutton{
+    
+    border: none;
+    height: 30px;
+    width: 50px;
+    border-radius: 3px;
+    color: black;
+    background-color: rgb(236, 235, 235)
+}
+.navicbutton{
+    background-color: rgb(83, 161, 224);
+    border: none;
+    height: 30px;
+    width: 120px;
+    border-radius: 3px;
+    color: rgb(242, 248, 248);
+}
+.mainbody{
+    background-color:rgb(242, 248, 248);
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 50px;
+    border: solid;
+    border-color: rgb(227, 227, 227);
+    position: relative;
+
+}
+@media screen and (max-width:600px) {
+    .navicbutton{
+        background-color: blueviolet;
+    }
+    .icbutton{
+        background-color:darkgrey;
+    }
+    .mainbody{
+        background-color: white;
+        border-color: black;
+        position: fixed;
+
+    }
+}
