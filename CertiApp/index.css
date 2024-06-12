@@ -1,0 +1,35 @@
+.button{
+    text-align: end;
+    background-color: rgb(83, 161, 224);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.navicbutton{
+    text-align: end;
+    background-color:rgb(236, 235, 235);
+    border: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.vcbutton{
+    text-align: center;
+    background-color :#15c1d8;
+    border: none;
+    color: white;
+    width: 80px;
+    height: 30px;
+ }
+ img{
+   margin-top: 50px;
+   height:150px;
+   width:150px;
+}
+@media screen and (max-width:600px){
+    .button{
+        background-color: blueviolet;
+    }
+}
+    

@@ -1,0 +1,62 @@
+.icbutton{
+    background-color: #64CDEA;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 120px;
+}
+.hbutton{
+    border: none;
+    height: 30px;
+    width: 50px;
+    border-radius: 3px;
+    color: black;
+    background-color: rgb(236, 235, 235)
+}
+.navicbutton{
+    background-color: rgb(83, 161, 224);
+    border: none;
+    height: 30px;
+    width: 120px;
+    border-radius: 3px;
+    color: rgb(242, 248, 248);
+}
+.mainbody{
+    background-color:rgb(242, 248, 248);
+    margin-left: 250px;
+    margin-right: 250px;
+    padding-left: 60px;
+    border: solid;
+    border-color: rgb(227, 227, 227);
+}
+h2 {
+    text-align: center;
+}
+input{
+    padding-top: 5px;
+    width: 90%;
+}
+select{
+    padding-top: 5px;
+    width: 90%;
+}
+
+
+@media screen and (max-width:1000px) {
+    .mainbody{
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+}
+@media screen and (max-width:700px) {
+    .mainbody{
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+@media screen and (max-width:540px) {
+    .mainbody{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
