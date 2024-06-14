@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Certificate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200">
+    <section class="flex justify-end">
+        <a href="home.html"><button class="text-balck bg-grey-200 border rounded lg px-2 py-2">Home</button></a>
+        <a href="issue.html"><button class="text-white bg-blue-500 border rounded lg px-2 py-2">Issue Certificate</button></a>
+    </section>
+    <h3 class="font-bold text-2xl">Certificate Dapp</h3>
+    <section>
+    <div class="bg-gray-100 p-10 mx-24 m-10 rounded lg">
+
+        <h3  class="font-semibold text-xl">Issue New Certificate</h3>
+        
+        <form class="space-y-5">
+        <div class="flex flex-col">
+        <label>Select Course*</label>
+        <select name="Course" class="w-96 border border-black" >
+        <option value="Blockchainassociate">Certified Blockchain Associate</option>
+        <option value="Certified Ethereum Network Administrator">Certified Ethereum Network Administrator</option>
+        <option value="Certified Hyperledger Fabric Developer">Certified Hyperledger Fabric Developer</option>
+        <option value="Certified Ethereum Developer">Certified Ethereum Developer</option></select>
+        </div>
+
+        <div class="flex flex-col">
+        <label>Certificate ID*</label>
+        <input type="text" name="cid" required placeholder="Certificate ID" class="w-96 border border-black">
+        </div>
+
+        <div class="flex flex-col">
+        <label>Candidate Name*</label>
+        <input type="text" name="name" required placeholder="Name" class="w-96 border border-black">
+        </div>
+
+        <div class="flex flex-col">
+        <label>Select Grade*</label>
+        <select name="grade" class="w-96 border border-black">
+        <option value="S">S</option>
+        <option value="A+">A+</option>
+        <option value="A">A</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        </select>
+        </div>
+
+        <div class="flex flex-col">
+        <label>Issue Date*</label>
+        <input type="date" class="w-96 border border-black"></input>
+        </div>
+
+        <div>
+        <button class="text-white bg-blue-400 border rounded lg px-2 py-2">Issue Certificate</button>
+        </div>
+        
+        </form>
+    </div>
+    </body>
+</html>
+
+    </section>
+</body>
+</html>
