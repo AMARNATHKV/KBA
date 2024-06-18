@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+
+    <section class="bg-white fixed w-full top-0">
+        <div class="mx-auto flex items-center justify-between p-4">
+
+            <div class="flex items-center space-x-5">
+                <button class="w-16 h-9 rounded-full p-2 outline-none bg-white hover:bg-gray-200 ">
+                    <img src="./images/menu.webp" alt="" class="h-5">
+                </button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" class="h-6">
+            </div>
+            <!-- Search Bar -->
+             <section class="w-full flex gap-3 justify-center">
+             <div class="w-6/12 flex border rounded-full focus:ring-1 ring-blue-600  outline-none px-5 bg-gray-100 hover:bg-gray-200  pl-0 ">
+                <input type="text" placeholder="Search" class="w-full outline-none border rounded-l-full p-2 focus:ring-1 ring-blue-600">
+                <img src="./images/search.webp" alt="" class="h-10 ml-5">
+            </div>
+               <!--<img src="./images/v.png" alt="" class="h-10 border rounded-full bg-gray-100 p-2" >-->
+            </section>
+            <!-- User Profile -->
+            <div class="flex items-center space-x-4">
+                <button class="p-2 rounded-full hover:bg-gray-200">
+                    
+                </button>
+                <button class="w-8 bg-white hover:bg-gray-200  rounded-full">
+                    <img src="./images/create.webp" alt="" class="h-8 p-1">
+                </button>
+                <button class="w-8 bg-white hover:bg-gray-200  rounded-full">
+                    <img src="./images/not.webp" alt="" class="h-8 p-1">
+                </button>
+                <button class="w-8 bg-white  rounded-full">
+                    <img src="./images/profile.png" alt="" class="h-8 p-1 rounded-full">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar -->
+    <div class="flex mt-16">
+        <section class="w-64 bg-white shadow-md h-screen p-4 overflow-auto fixed ">
+            <nav class="flex flex-col space-y-4">
+               
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="images/home.jpg" class="h-6">
+                    <span class="text-sm">Home</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="images/shorts.png" class="h-6">
+                    <span class="text-sm">Shorts</span>
+                </a>
+
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="images/sub.png" class="h-6">
+                    <span class="text-sm">Subscriptions</span>
+                </a>
+
+                <hr>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <span class="font-medium">You</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/urchannel.webp" class="h-6">
+                    <span class="text-sm">Your Channel</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/history.webp" class="h-6">
+                    <span class="text-sm">History</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/playlist.png" class="h-6">
+                    <span class="text-sm">Playlist</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/urvideos.webp" class="h-6">
+                    <span class="text-sm">Your Videos</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/watchlater.png" class="h-6">
+                    <span class="text-sm">Watch Later</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/like.webp" class="h-6">
+                    <span class="text-sm">Liked Videos</span>
+                </a>
+                
+                <hr>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <span class="font-medium">Explore</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="https://img.icons8.com/material-outlined/24/000000/fire-element.png" class="h-6">
+                    <span class="text-sm">Trending</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/shopping.webp" class="h-6">
+                    <span class="text-sm">Shopping</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/music.webp" class="h-6">
+                    <span class="text-sm">Music</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/movies.png" class="h-6">
+                    <span class="text-sm">Movies</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/live.webp" class="h-6">
+                    <span class="text-sm">Live</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/gaming.webp" class="h-6">
+                    <span class="text-sm">Gaming</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/news.webp" class="h-6">
+                    <span class="text-sm">News</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/sports.webp" class="h-6">
+                    <span class="text-sm">Sports</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/courses.webp" class="h-6">
+                    <span class="text-sm">Gaming</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/podcast.png" class="h-6">
+                    <span class="text-sm">Podcasts</span>
+                </a>
+                <hr>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <span class="font-medium">More from YouTube</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/premium.webp" class="h-6">
+                    <span class="text-sm">YouTube Premium</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/studio.webp" class="h-6">
+                    <span class="text-sm">YouTube Studio</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/ytmusic.webp" class="h-6">
+                    <span class="text-sm">YouTube Music</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/kids.png" class="h-6">
+                    <span class="text-sm">YouTube Kids</span>
+                </a>
+                
+                <hr>
+
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/settings.webp" class="h-6">
+                    <span class="text-sm">Settings</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/report.webp" class="h-6">
+                    <span class="text-sm">Report History</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/help.webp" class="h-6">
+                    <span class="text-sm">Help</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                    <img src="./images/feedback.webp" class="h-6">
+                    <span class="text-sm">Send Feedback</span>
+                </a>
+                <!-- Add more items as needed -->
+            </nav>
+        </section>
+
+        <!-- Main Content 
+        <main class="flex-grow p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                 Video Item 
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/320x180" alt="Video Thumbnail" class="w-full">
+                    <div class="p-4">
+                        <h2 class="text-lg font-bold">Video Title</h2>
+                        <p class="text-gray-600">Channel Name</p>
+                        <p class="text-gray-600">123K views • 1 week ago</p>
+                    </div>
+                </div>
+                Add more video items as needed --
+            </div>
+        </main>
+    </div>-->
+<section class="mx-72 mt-6">
+    <div class="gap-2 flex">
+       <button class="bg-black text-white w-10 h-8 border rounded-lg font-medium">All</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-12 h-8 border rounded-lg font-medium">News</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-20 h-8 border rounded-lg font-medium">Comedy</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-24 h-8 border rounded-lg font-medium">Trailers</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-48 h-8 border rounded-lg font-medium">Malayalam Cinema</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-28 h-8 border rounded-lg font-medium">T-Series</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-24 h-8 border rounded-lg font-medium">Cricket</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-24 h-8 border rounded-lg font-medium">Football</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-12 h-8 border rounded-lg font-medium">Live</button>
+       <button class="bg-gray-200 hover:bg-gray-300 text-gray-900 w-44 h-8 border rounded-lg font-medium">Science Fiction</button>
+    </div>
+
+    <div class="grid grid-cols-3 mt-10 gap-y-20">
+        <div>
+            <iframe src="https://www.youtube.com/embed/71jOdjkAmlk" class="border rounded-lg "></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2  rounded-md">
+                <img src="./images/pp2.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">The Super Gaming</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-24">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">67K views • 1 day ago</div>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/-D-63vNShW4" class="border rounded-lg"></iframe>
+            <a href="#" class="flex space-x-2 p-2  rounded-md">
+                <img src="./images/pp1.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Adichu Keri Vaa Remix Song</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-7">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">58K views • 5 hours ago</div>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/FiiD9A86s0Y" class="border rounded-lg"></iframe>
+            <a href="#" class="flex  space-x-2 p-2  rounded-md">
+                <img src="./images/pp3.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Virat Kohli top 10 Cricket catches</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-1">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">18K views • 1 month ago</div>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/bGr0BImZlWM" class="border rounded-lg"></iframe>
+            <a href="#" class="flex  space-x-2 p-2  rounded-md">
+                <img src="./images/pp4.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Oscar specials</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-32">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">198K views • 1 day ago</div>
+        </div>
+       <div>
+            <iframe src="https://www.youtube.com/embed/G0edEjt4Lzo" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2 rounded-md">
+                <img src="./images/pp5.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Spiderman Movie Part(1)</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-12">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">67K views • 6 months ago</div>
+       </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/_bb33rYsAvI" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2 rounded-md">
+                <img src="./images/pp6.png" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">India vs Pakistan World Cup match Highlights</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pr-11">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">54K views • 9 hours ago</div>
+        </div>
+       <div>
+            <iframe src="https://www.youtube.com/embed/e3fz3dqhN44" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2  rounded-md">
+                <img src="./images/pp7.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Quantum Computer</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-20">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">230K views • 1 month ago</div>
+       </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/lCxcTsOHrjo" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2  rounded-md">
+                <img src="./images/pp8.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">tailwindcss Full Course</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-16">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">120K views • 10 months ago</div>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/BVvnSzMqI3M" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                <img src="./images/pp9.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Automobile video</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-24">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">512K views • 1 day ago</div>
+        </div>
+       <div>
+            <iframe src="https://www.youtube.com/embed/X0KD6gXlFjY" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2  rounded-md">
+                <img src="./images/pp10.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Top-10 Football Matches</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-12">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">30K views • 12 days ago</div>
+       </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/M9lilP7YsCc" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                <img src="./images/pp11.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Shubh - One Love</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-25">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">518K views • 7 months ago</div>
+        </div>
+       <div>
+            <iframe src="https://www.youtube.com/embed/1qNCGQyt1aU" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                <img src="./images/pp12.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Pink Panther Show</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-15">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">5K views • 4 months ago</div>
+       </div> 
+        <div>
+            <iframe src="https://www.youtube.com/embed/PyxBVuiq2NY" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                <img src="./images/pp13.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">World’s Most Advanced Jet</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-7">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">190K views • 6 months ago</div>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/M7-h3FO-KKo" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                <img src="./images/pp14.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">Testing If You Can Blow Your Own Sail</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-2">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">40K views • 4 months ago</div>
+        </div>
+        <div>
+            <iframe src="https://www.youtube.com/embed/RflpBqeuf6g" class="border rounded-lg"></iframe>
+            <a href="#" class="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded-md">
+                <img src="./images/pp15.jpg" class="h-6 border rounded-full">
+                <span class="text-sm flex font-semibold text-base">TOP FIVE BEST MAGICIANS 2023</span>
+                <img src="./images/opt.webp" alt="" class="h-6 pl-2
+                ">
+            </a>
+            <div class="ml-8 text-sm text-gray-600">Channel Name</div>
+            <div class="ml-8 text-sm text-gray-600">50K views • 4 days ago</div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
