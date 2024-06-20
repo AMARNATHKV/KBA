@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: square;
+    list-style-position: inside;
+}
+li{
+    font-size: large;
+    font-weight: 800;
+}
+p.c{
+    text-align: justify;
+}
+img{
+    height:150px;
+    width: 120px;
+    float: right;
+    opacity: 0.5;
+    margin-left: 20px;
+}
+img:hover{
+    opacity: 1.0;
+}
+p.a{
+    
+    border-style: solid;
+    background-color:burlywood;
+    height: 80px;
+    width: 500px;
+    padding: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow:auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 10px;
+    border-color: blue;
+    outline-style: solid;
+    
+}
+table,th,td{
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: rgb(255, 11, 11);
+    padding: 15px;
+    
+}
+th{
+    font-family:Arial, Helvetica, sans-serif
+}
+
+a.link:visited{
+    color:green
+}
+
+a.link:hover{
+    color: red;
+}
+.navbar{
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    background: cadetblue;
+    padding: 15px;  
+    justify-content: space-between;
+    gap: 15px;
+    margin:0 ;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar:hover{
+    color: orange;
+}
+h2{
+    text-align: center;
+}
+.row{
+    display: flex;
+}
+
+.column{
+    width:33.33%;
+    padding: 5px;
+    border-right: 1px solid green;     
+}
+.limg{
+    float: left;
+    padding: 10px;
+    margin-left: 0px;
+}
+span{
+    font-weight: bold;
+}
+.row:after{  
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column1{
+    width: 25%;
+    padding: 5px;
+    border-right: 1px solid green;  
+    border-left: 1px solid green;
+}
+.column2{
+    width: 50%;
+    padding: 5px;
+    border-right: 1px solid green;  
+    border-left: 1px solid green;
+}
+.limg{
+    float: left;
+    padding: 10px;
+    margin-left: 0px;
+}
+span{
+    font-weight: bold;
+}
+nav{
+    position: sticky;
+    top: 0px;
+}
+.books{
+    height: 170px;
+    width: 1200px;
+}
+.whatsapp{
+    height: 20px;
+    width: 20px;
+    opacity: 1.0;
+    position: sticky;
+    top: 200px;
+}
+.navbar1{
+   display: none;
+   list-style-type: none;
+   gap: 15px;
+   overflow: hidden;
+   background-color: greenyellow;
+   gap: 20px;
+   
+}
+.menu{
+    height: 40px;
+    width: 40px;
+    opacity: 1.0;
+    display: none;
+   
+}
+@media screen and (max-height:300px){
+    p.a{
+        background-color: brown;
+        width: 200px;
+    }
+    .row{
+        display: block;
+    }
+    .column1,.column2,.books{
+        width: 100px;
+    }
+    .books{
+        height: 100%;
+        width: 100%;
+    }
+    .navbar{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+}

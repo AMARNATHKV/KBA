@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+            let p = 1000; 
+            let r = 5; 
+            let t = 2; 
+
+            let si = (p * r * t) / 100;
+            document.write(`The simple interest is ${si}`);
+
+            
+            let ci = p * Math.pow((1 + r / 100), t) - p;
+            document.write(`<br>The compound interest is ${ci}`);
+
+    </script>
+</body>
+</html>

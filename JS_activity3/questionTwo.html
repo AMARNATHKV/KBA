@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="lists">
+
+    </div>
+    <script>
+        let x=document.createElement("ul");
+        x.id="ls1"
+       document.getElementById("lists").appendChild(x);
+       let y=document.createElement("li");
+       y.innerHTML="Movie1";
+       let z=document.createElement("li");
+       z.innerHTML="Movie2";
+       let s=document.createElement("li");
+       s.innerHTML="Movie3";
+       document.getElementById("ls1").appendChild(y);
+       document.getElementById("ls1").appendChild(z);
+       document.getElementById("ls1").appendChild(s);
+
+
+    </script>
+</body>
+</html>

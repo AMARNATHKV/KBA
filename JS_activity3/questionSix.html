@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="div">
+
+    </div>
+    <script>
+
+        let x= document.createElement ("select");
+        x.id= "dropdown";
+        document.getElementById ("div") .appendChild (x);
+        
+
+        let y = document.createElement ("option")
+        y.innerHTML = " Black Forest";
+        document.getElementById ("dropdown") .appendChild (y);
+
+        let z= document.createElement ("option");
+        z.innerHTML= "Red Velvet";
+        z.value = "Red Velvet"
+        document.getElementById ("dropdown") .appendChild (z);
+        document.write (z.value)
+
+        let a= document.createElement ("option")
+        a.innerHTML= "Vancho";
+        document.getElementById ("dropdown") .appendChild (a);
+
+        </script>
+
+</body>
+</html>

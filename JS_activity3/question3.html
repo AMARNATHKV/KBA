@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="classes"></div>
+    <script>
+        let a=document.createElement("select");
+        a.id="sel";
+        document.getElementById("classes").appendChild(a);
+        let x=document.createElement("option");
+        x.innerHTML="Blockchain"
+        let y=document.createElement("option");
+        y.innerHTML="Cyber Security";
+        let z=document.createElement("option");
+        z.innerHTML="PCB";
+        
+       document.getElementById("sel").appendChild(x);
+       document.getElementById("sel").appendChild(y);
+       document.getElementById("sel").appendChild(z);
+    </script>
+</body>
+</html>
