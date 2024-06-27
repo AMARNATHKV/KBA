@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let mark = [95, 92, 84, 68, 72, 98];
+
+        let sum = 0;
+        for (let i = 0; i < mark.length; i++) {
+            sum = sum + mark[i];
+            avg = sum / mark.length;
+        }
+        document.write("Total mark= ",sum);
+        document.write("<br>");
+        document.write("Average mark= ",avg);
+        document.write("<br>");
+
+        document.write("Grade= ")
+        if ((sum / mark.length) > 90) {
+            document.write("A+");
+        }
+        else if ((sum / mark.length) > 80 && (sum / mark.length) <= 90) {
+            document.write("A")
+        }
+        else if ((sum / mark.length) > 70 && (sum / mark.length) <= 80) {
+            document.write("B+")
+        }
+
+        else if ((sum / mark.length) > 60 && (sum / mark.length) <= 70) {
+            document.write("C+")
+        }
+        else if ((sum / mark.length) > 50 && (sum / mark.length) <= 60) {
+            document.write("C");
+        }
+        else if ((sum / mark.length) > 40 && (sum / mark.length) <= 50) {
+            document.write("C+");
+        }
+        else {
+            document.write("Failed");
+        }
+
+    </script>
+</body>
+
+</html>

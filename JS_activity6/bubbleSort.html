@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[8,2,6,7,3,1];
+        let i;
+        let j
+        let temp;
+        for(i=0;i<a.length-1;i++)
+        {
+            for(j=0;j<(a.length-i-1);j++)
+            {
+                if(a[j]>a[j+1])
+                {
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp
+                }
+            }   
+        }
+        document.write("Array in ascending order  ",a);
+
+        document.write("<br>");
+        for(i=0;i<a.length-1;i++)
+        {
+            for(j=0;j<(a.length-i-1);j++)
+            {
+                if(a[j]<a[j+1])
+                {
+                temp=a[j+1];
+                a[j+1]=a[j];
+                a[j]=temp
+                }
+            }   
+        }
+        document.write("Array in decending order  ",a);
+        document.write("<br>");
+        document.write("Minimum element= ",a[a.length-1]);
+        document.write("<br>");
+        document.write("Maximum element= ",a[0]);
+
+    </script>
+</body>
+</html>

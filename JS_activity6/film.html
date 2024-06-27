@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let film=["KGF","Premam","Avesham","RDX","Bahubali","Premalu","Chaver"];
+        fav=film[0];
+        document.write("Favourite movie= ",fav);
+        document.write("<br>");
+        film.push("Manichithrathazhu");
+        document.write(film);
+        document.write("<br>");
+        film.pop();
+        document.write(film);
+        document.write("<br>");
+        delete(film[1]);
+        document.write(film);
+        document.write("<br>");
+        for(i=0;i<film.length;i++)
+        {
+        if(film[i]==null)
+        {
+            film[i]=film[film.length-1];
+            film.pop();
+            break;
+        }
+       }
+       document.write(film);
+       document.write("<br>");
+
+       let b=[]
+       for(i=2;i<film.length;i++)
+       {
+        b.push(film[i]);
+       }
+       
+       document.write(film);
+       document.write("<br>");
+       document.write(b);
+       document.write("<br>");
+      for(i=0;i<film.length;i++)
+      {
+        if(film[i]=="Avesham")
+        {
+            document.write(`Movie present at location ${i}`)
+        }
+      }
+      
+    </script>
+</body>
+</html>
