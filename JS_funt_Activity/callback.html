@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculate(a, b, operation){
+            return operation(a,b);
+        }
+        function add(a,b){
+            return a+b;
+        }
+        function sub(a,b){
+            return a-b
+        }
+        function mul(a,b){
+            return a*b;
+        }
+        function div(a,b){
+            if(b!=0){
+                return a/b;
+            }
+            else{
+                console.log("Division not possible");
+            }
+        }
+        console.log(calculate(3,5, add));        
+        console.log(calculate(3,5, sub));   
+        console.log(calculate(3,5, mul));
+        console.log(calculate(3,5, div));
+        
+    </script>
+</body>
+</html> 
