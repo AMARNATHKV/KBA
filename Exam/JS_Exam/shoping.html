@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shopping.css">
+    <style>
+    .bought {
+    text-decoration: line-through;
+    color: grey;
+    }
+    </style>
+</head>
+<body>
+    <h1>Shopping List Manager Application</h1>
+    <label for="itemname">Item Name</label>
+    <input type="text" name="" id="itemname"><br>
+    <label for="itemcat">Item category (1-Groceries, 2-Electronics, 3-Clothing)</label>
+    <input type="text" id="itemcat">
+    <button onclick="addItem()">Add item</button>
+    <ul id="itemlist"></ul>
+</body>
+<script src="shopping.js"></script>
+</html>

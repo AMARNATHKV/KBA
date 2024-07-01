@@ -1,0 +1,15 @@
+ul{
+    list-style-type: none;
+}
+li{
+    margin: 5px 0;
+}
+.groceries{
+    color: green;
+}
+.electronics{
+    color: blue;
+}
+.clothing{
+    color: purple;
+}
