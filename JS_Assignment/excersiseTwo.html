@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text"><br><br>
+    <label for="">Address</label>
+    <textarea name="" id=""></textarea><br><br>
+    <label for="">Degree: </label>
+
+    <input type="radio" value="btech" name="degree" onclick="removeDegree()">Btech
+    <input type="radio" value="mtech"  name="degree" onclick="removeDegree()">Mtech
+    <input type="radio" value="mca"  name="degree" onclick="removeDegree()">MCA
+    <input type="radio" value="others"  name="degree" onclick="addDegree()">Others
+
+    <div id="display"></div>
+</body>
+<script>
+    let dropdownAdded = false;
+    function addDegree(){
+        if (!dropdownAdded) {
+        const display=document.getElementById('display');
+        const dropdown=document.createElement("select");
+        const item1=document.createElement("option");
+        const item2=document.createElement("option");
+        const item3=document.createElement("option");
+        const item4=document.createElement("option");
+
+
+        item1.textContent="BCA";
+        item2.textContent="PGDCA";
+        item3.textContent="BCom";
+        item4.textContent="Mphil";
+
+        dropdown.appendChild(item1);
+        dropdown.appendChild(item2);
+        dropdown.appendChild(item3);
+        dropdown.appendChild(item4);
+        display.appendChild(dropdown);
+        }
+        
+        dropdownAdded = true;
+    }
+    function removeDegree(){
+        remove=document.getElementById('display').textContent='';
+    }
+</script>
+</html>

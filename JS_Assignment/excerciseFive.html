@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square of Shapes</title>
+</head>
+<body>
+    <label for="squareSide">Enter side of square</label>
+    <input type="text" id="squareSide"><br><br>
+    <button onclick="areaSquare()">Area of Square</button>
+    <p id="displaySquare"></p>
+
+    <label for="rectLength">Enter the length</label>
+    <input type="text" id="rectLength"><br><br>
+    <label for="rectBreadth">Enter the breadth</label>
+    <input type="text" id="rectBreadth"><br><br>
+    <button onclick="areaRectangle()">Area of Rectangle</button>
+    <p id="displayRectangle"></p>
+
+    <label for="circleRadius">Enter the radius</label>
+    <input type="text" id="circleRadius"><br><br>
+    <button onclick="areaCircle()">Area of Circle</button>
+    <p id="displayCircle"></p>
+    <script>
+        function areaSquare(){
+            const squareSide=document.getElementById('squareSide');
+            
+            let side=squareSide.value;
+            if(side){
+                let areaSquare=side*side;
+            const displaySquare=document.getElementById('displaySquare').innerHTML=`area of square with side ${side} is ${areaSquare} `;
+            }
+            
+        }
+
+        function areaRectangle(){
+            const rectLength=document.getElementById("rectLength");
+            const rectBreadth=document.getElementById('rectBreadth');
+
+            let length=rectLength.value;
+            let breadth=rectBreadth.value;
+
+                if(length!=='' && breadth!=='')
+                {
+                    let areaRectangle=length*breadth;
+                    const displayRect=document.getElementById('displayRectangle').innerHTML=`area of rectangle with length ${length} and breadth ${breadth} is ${areaRectangle} `
+                }
+        }
+
+        function areaCircle(){
+            const circleRadius=document.getElementById('circleRadius');
+            
+            let radius=circleRadius.value;
+            if(radius){
+                let pi=3.14;
+                let areaCircle=pi*radius*radius;
+            const displayCircle=document.getElementById('displayCircle').innerHTML=`area of circle with radius ${radius} is ${areaCircle} `;
+            }
+            
+        }
+    </script>
+</body>
+</html>

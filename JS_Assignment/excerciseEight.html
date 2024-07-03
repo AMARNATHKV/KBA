@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="subName">Name of Subject: </label>
+    <input type="text" id="subName"><br><br>
+    <label for="mark">Mark</label>
+    <input type="text" id="mark"><br><br>
+    <button onclick="showGrade()">Submit</button>
+    <p id="showGrade"></p>
+    <script>
+        function showGrade(){
+
+            const subjectName=document.getElementById('subName');
+            const markInput=document.getElementById('mark');
+            const show=document.getElementById('showGrade')
+
+            let subject=subjectName.value;
+            let mark=markInput.value;
+
+            if(mark>90){
+               show.innerHTML=`Subject: ${subject}, Grade: A+`;
+            }
+            else if(mark>=80 && mark<=90){
+                show.innerHTML=`Subject: ${subject}, Grade: A`;
+            }
+            else if(mark>=70 && mark<=80){
+                show.innerHTML=`Subject: ${subject}, Grade: B+`
+            }
+            else if(mark>=60 && mark<=70){
+                show.innerHTML=`Subject: ${subject}, Grade: C+`
+            }
+            else{
+                show.innerHTML=`Subject: ${subject}, Grade: C`;
+            }
+        }
+        
+    </script>
+</body>
+</html>

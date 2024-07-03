@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppercase String</title>
+</head>
+<body>
+    <label for="stringInput">Enter a String: </label>
+    <input type="text" id="stringInput"><br><br>
+    <button onclick="processString()">Convert to Lowercase</button>
+    <p id="lowerCaseString"></p>
+
+    <script>
+    
+        function processString() {
+
+            const inputString = document.getElementById('stringInput').value;
+
+            if(inputString!=='' && isNaN(inputString)){
+                const lowerCaseString = inputString.toLowerCase();
+                document.getElementById('lowerCaseString').textContent = `Uppercase String: ${lowerCaseString}`;
+            }
+           else{
+            alert('enter valid string')
+           }
+        }
+    </script>
+</body>
+</html>

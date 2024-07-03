@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Calculator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 h-screen flex justify-center items-center">
+    <div class="bg-gray-900 shadow-md rounded-md p-4 max-w-xs w-full">
+        <form action="" class="flex flex-col space-y-4">
+            
+            <input type="text" id="displayMessage" class="bg-gray-100 text-gray-900 font-semibold text-2xl px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" readonly>
+
+            
+            <div class="grid grid-cols-4 gap-2 bg-gray-900">
+                
+                <button type="button" onclick="displayNum('1')" class="btn bg-blue-500 bg-blue-500">1</button>
+                <button type="button" onclick="displayNum('2')" class="btn bg-blue-500">2</button>
+                <button type="button" onclick="displayNum('3')" class="btn bg-blue-500">3</button>
+                <button type="button" onclick="setOperator('+')" class="btn bg-red-500 text-white">+</button>
+                <button type="button" onclick="displayNum('4')" class="btn bg-blue-500">4</button>
+                <button type="button" onclick="displayNum('5')" class="btn bg-blue-500">5</button>
+                <button type="button" onclick="displayNum('6')" class="btn bg-blue-500">6</button>
+                <button type="button" onclick="setOperator('-')" class="btn bg-red-500 text-white">-</button>
+                <button type="button" onclick="displayNum('7')" class="btn bg-blue-500">7</button>
+                <button type="button" onclick="displayNum('8')" class="btn bg-blue-500">8</button>
+                <button type="button" onclick="displayNum('9')" class="btn bg-blue-500">9</button>
+                <button type="button" onclick="setOperator('*')" class="btn bg-red-500 text-white">*</button>
+                <button type="button" onclick="displayNum('0')" class="btn col-span-2 bg-blue-500">0</button>
+                <button type="button" onclick="setOperator('.')" class="btn bg-blue-500">.</button>
+                <button type="button" onclick="setOperator('/')" class="btn bg-red-500 text-white">/</button>
+                <button type="button" onclick="setOperator('%')" class="btn bg-red-500 text-white">%</button>
+                <button type="button" onclick="calculate()" class="btn col-span-4 bg-red-500 text-white">Calculate</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let first = '';
+        let second = '';
+        let operator = null;
+
+        function displayNum(number){
+            if(operator === null) {
+                first += number;
+            } else {
+                second += number;
+            }
+            updateDisplay();
+        }
+
+        function setOperator(op){
+            if (first !== '') {
+                operator = op;
+            }
+            updateDisplay();
+        }
+
+        function calculate(){
+            const display = document.getElementById("displayMessage");
+            let result;
+            switch(operator){
+                case '+':
+                    result = parseFloat(first) + parseFloat(second);
+                    break;
+                case '-':
+                    result = parseFloat(first) - parseFloat(second);
+                    break;
+                case '*':
+                    result = parseFloat(first) * parseFloat(second);
+                    break;
+                case '/':
+                    if (parseFloat(second) === 0) {
+                        display.value = "Division by zero error";
+                        return;
+                    }
+                    result = parseFloat(first) / parseFloat(second);
+                    break;
+                case '%':
+                    result = parseFloat(first) % parseFloat(second);
+                    break;
+                default:
+                    display.value = "Enter valid numbers";
+                    return;
+            }
+            
+            display.value = result;
+        
+            first = '';
+            second = '';
+            operator = null;
+        }
+
+        function updateDisplay(){
+            const display = document.getElementById("displayMessage");
+            if (operator === null) {
+                display.value = first;
+            } else {
+                display.value = first + ' ' + operator + ' ' + second;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="numberInput">Enter the Number</label>
+    <input type="text" id="numberInput"><br><br>
+    <button onclick="findFactorial()">Factorial</button>
+    <p id="showFactorial"></p>
+
+    <script>
+        function findFactorial(){
+            const numberInput=document.getElementById('numberInput').value;
+            if(numberInput!=='' && !isNaN(numberInput))
+            {
+                let fact=1;
+                let i=1;
+                let n=5;
+                while(i<=n)
+                {
+                    fact=fact*i
+                    i++;
+                }
+                show=document.getElementById('showFactorial').textContent=`Factorial = ${fact}`
+            }
+            else{
+                alert('enter valid number');
+            }
+        }
+    </script>
+</body>
+
+</html>

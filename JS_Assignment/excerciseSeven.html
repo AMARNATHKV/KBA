@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="elementInput">Enter element :</label>
+    <input type="text" id="elementInput"><br><br>
+    <button onclick="addArray()">Add element</button><br><br>
+    <button onclick="showArray()">Submit</button><br><br>
+    <label for="">Entered array is: </label>
+    <p id="displayArray"></p>
+    
+    <div id="div1">Index
+        <select name="" id="selectName" onclick="displaySelectedElement()"></select> th element is:
+        <span id="selectedElement"></span>
+    </div>
+    <label for="">Array in sorted order is:</label>
+    <p id="displaySorted"></p>
+    <label for="searchValue">Search: </label>
+    <input type="text" id="searchValue">
+    <button onclick="searchItem()">Search</button>
+    <p id="searchDisplay"></p>
+    <label for="">The reversed array is</label>
+    <p id="revArray"></p>
+    
+    
+    <script>
+        let array = [];
+        let newArray = [];
+        let revArray = [];
+
+        function addArray() {
+            let elementInput = document.getElementById('elementInput');
+            const element = elementInput.value;
+            
+            if (element) {
+                array.push(element);
+            }
+            
+            elementInput.value = '';
+            SelectOptions();
+            sortArray();
+        }
+
+        function SelectOptions() {
+            const selectName = document.getElementById("selectName");
+            selectName.innerHTML = ""; 
+
+            for (let i = 0; i < array.length; i++) {
+                let option = document.createElement("option");
+                option.textContent = i;
+                option.value = i;
+                selectName.appendChild(option);
+            }
+        }
+
+        function sortArray() {
+            newArray = array.slice(); 
+            
+            for (let i = 0; i < newArray.length - 1; i++) {
+                for (let j = 0; j < newArray.length - i - 1; j++) {
+                    if (newArray[j] > newArray[j + 1]) {
+                        let temp = newArray[j];
+                        newArray[j] = newArray[j + 1];
+                        newArray[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        function searchItem() {
+            let flag = 0;
+            let searchValue = document.getElementById('searchValue').value;
+            
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === searchValue) {
+                    flag = 1;
+                    break;
+                }
+            }
+            
+            if (flag === 1) {
+                document.getElementById('searchDisplay').innerHTML = "Element found";
+            } else {
+                document.getElementById('searchDisplay').innerHTML = "Element not found";
+            }
+        }
+
+        function reverseArray(revArray) {
+            revArray = array.slice(); 
+            let left = 0;
+            let right = revArray.length - 1;
+
+            while (left < right) {
+                let temp = revArray[left];
+                revArray[left] = revArray[right];
+                revArray[right] = temp;
+
+                left++;
+                right--;
+            }
+
+            return revArray;
+        }
+
+        function showArray() {
+            document.getElementById('displayArray').innerHTML = array.join(", ");
+            document.getElementById('displaySorted').innerHTML = newArray.join(", ");
+            document.getElementById('revArray').innerHTML = reverseArray().join(", ");
+        }
+
+        function displaySelectedElement() {
+            const selectName = document.getElementById("selectName");
+            const selectedIndex = selectName.value;
+            const selectedElement = array[selectedIndex];
+            document.getElementById("selectedElement").textContent = selectedElement;
+        }
+    </script>
+</body>
+</html>

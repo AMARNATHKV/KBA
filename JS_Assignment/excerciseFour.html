@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name and Roll No</title>
+</head>
+<body>
+    <label for="name">Name :</label>
+    <input type="text" id="name"><br><br>
+    <button onclick="addName()">Submit</button><br><br>
+    
+    <label for="rollNumber">Enter roll number:</label>
+    <select id="selectName" onchange="displaySelectedElement()"></select><br><br>
+    
+    <p id="showname"></p>
+    
+    <script>
+        let names = [];
+
+        function addName() {
+            let nameInput = document.getElementById("name");
+            let nameValue = nameInput.value.trim();
+            if (nameValue !== '') {
+                names.push(nameValue); 
+                updateDropdown();
+                nameInput.value = ''; 
+            }
+        }
+
+        function updateDropdown() {
+            const selectName = document.getElementById("selectName");
+            selectName.innerHTML = ""; 
+
+            for (let i = 0; i < names.length; i++) {
+                let option = document.createElement("option");
+                option.textContent = i; 
+                option.value = i;
+                selectName.appendChild(option);
+            }
+        }
+
+        function displaySelectedElement() {
+            const selectName = document.getElementById("selectName");
+            const selectedIndex = selectName.selectedIndex;
+            const selectedName = names[selectedIndex];
+            document.getElementById("showname").textContent = `Name: ${selectedName}`;
+        }
+    </script>  
+</body>
+</html>

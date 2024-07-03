@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="fruitName">Enter fruit name: </label>
+    <input type="text" id="fruitName"><br><br>
+    <button onclick="addItem()">Add fruits</button>
+    <select id="selectName" onclick="displaySelectedElement()"></select> 
+    <p id="showName"></p>
+    <script>
+        let fruits = [];
+
+        function addItem() {
+            const fruit = document.getElementById("fruitName").value;
+            if (fruit !== '' && isNaN(fruit)) {
+                fruits.push(fruit);
+                SelectOptions();
+                document.getElementById("fruitName").value = '';
+            }
+        }
+
+        function SelectOptions() {
+            const selectName = document.getElementById("selectName");
+            selectName.innerHTML = ""; 
+
+            for (let i = 0; i < fruits.length; i++) {
+                let option = document.createElement("option");
+                option.textContent = i;
+                option.value = i;
+                selectName.appendChild(option);
+            }
+        }
+
+        function displaySelectedElement() {
+            const selectName = document.getElementById("selectName");
+            const selectedIndex = selectName.value;
+            const selectedElement = fruits[selectedIndex];
+            document.getElementById("showName").textContent = `Selected fruit: ${selectedElement}`;
+        }
+    </script>
+</body>
+</html>

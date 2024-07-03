@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="stringInput">Enter a String: </label>
+    <input type="text" id="stringInput"><br><br>
+    <button onclick="countVowels()">Count Vowels</button>
+    <p id="showVowels"></p>
+
+    <script>
+        function countVowels(){
+
+            const inputString = document.getElementById('stringInput').value;
+
+            if(inputString!=='' && isNaN(inputString)){
+                let count=0;
+                let i;
+                for(i=0;i<inputString.length;i++){
+                    if(inputString[i]=='a'||inputString[i]=='e'||inputString[i]=='i'||inputString[i]=='o'||inputString[i]=='u'||
+                    inputString[i]=='A'||inputString[i]=='E'||inputString[i]=='I'||inputString[i]=='O'||inputString[i]=='U')
+                    count++;
+                    show=document.getElementById('showVowels').textContent=`no of vowels=${count}`;
+                }
+            }
+           else{
+            alert('enter valid string');
+           }
+        }
+    </script>
+</body>
+</html>

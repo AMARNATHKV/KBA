@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="elementInput">Enter Element </label>
+    <input type="text" id="elementInput">
+    <button onclick="addItem()">Submit</button>
+    <p id="displayInput"></p>
+
+    <script>
+        let names=[];
+        function addItem(){
+        let elementInput=document.getElementById('elementInput');
+        const element=elementInput.value;
+        
+        
+        if(element){
+            names.push(element);
+        }
+        elementInput.value='';
+        const display=document.getElementById('displayInput').innerHTML=names;
+        }
+
+    </script>
+</body>
+</html>

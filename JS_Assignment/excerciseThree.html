@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Numbers</title>
+</head>
+<body>
+    <label for="fnumber">First Number</label>
+    <input type="text" id="fnumber"><br><br>
+    <label for="snumber">Second Number</label>
+    <input type="text" id="snumber">
+
+    <p id="displayResult"></p>
+
+    <button onclick="compareNumber()">Compare</button>
+    <script>
+        function compareNumber(){
+            fnumber=document.getElementById('fnumber');
+            snumber=document.getElementById('snumber');
+            
+
+            first=fnumber.value;
+            second=snumber.value;
+
+            if(first!=='' && second!=='' && !isNaN(first) && !isNaN(second)){
+                if(first>second)
+                {
+                    display=document.getElementById('displayResult').innerHTML="First number is greater";
+                }
+                else if(first<second)
+                {
+                    display=document.getElementById('displayResult').innerHTML="Second number is greater";
+                }
+                else
+                {
+                    display=document.getElementById('displayResult').innerHTML="Same number";
+                }
+            }
+            else{
+                alert('Enter valid number');
+            }
+            fnumber.value='';
+            snumber.value='';
+        }
+    </script>
+</body>
+</html>
