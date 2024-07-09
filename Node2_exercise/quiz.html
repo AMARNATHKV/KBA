@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            background-color: #aaa;
+            font-size: 25px;
+            text-align: center; 
+        }
+
+        #question {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            font-size: 35px;
+        }
+
+        .answers {
+            font-size: 25px;
+        }
+
+        #quiz-container {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        #next-btn {
+            display: block;
+            margin: 40px auto;
+            padding: 10px 25px;
+            background-color: black;
+            color: white;
+        }
+
+        #countdown {
+            margin: 20px auto; 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="score"></div>
+    <div id="markout"></div>
+    <div id="quiz-container">
+        <div id="question-container">
+            <div id="question"></div>
+            <form id="answers-form">
+                <div id="answers" onclick="ansclick()"></div>
+            </form>
+        </div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+        <div id="countdown"></div>
+    </div>
+</body>
+<script src="quiz.js">
+
+</script>
+
+</html>
