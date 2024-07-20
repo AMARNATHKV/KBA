@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Certificate</title>
+    <style>
+        body {
+            background-color: rgb(236, 235, 235);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        nav {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: rgb(83, 161, 224);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .icbutton {
+            background-color: #64CDEA;
+            border: none;
+            border-radius: 5px;
+            height: 30px;
+            width: 120px;
+            margin-top: 10px;
+        }
+
+        .mainbody {
+            background-color: rgb(242, 248, 248);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            border: solid 1px rgb(227, 227, 227);
+            text-align: left;
+        }
+
+        input[type="text"], select, input[type="date"] {
+            width: calc(100% - 16px);
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button id="homeButton" class="button">Home</button>
+        <button id="issueButton" class="button">Issue Certificate</button>
+    </nav>
+
+    <h2>Certificate App</h2>
+
+    <div class="mainbody">
+        <h3>Issue New Certificate</h3>
+        <form id="issueForm">
+            <label for="Course">Select Course*</label><br>
+            <select id="Course" name="Course" required>
+                <option value="Blockchainassociate">Certified Blockchain Associate</option>
+                <option value="Certified Ethereum Network Administrator">Certified Ethereum Network Administrator</option>
+                <option value="Certified Hyperledger Fabric Developer">Certified Hyperledger Fabric Developer</option>
+                <option value="Certified Ethereum Developer">Certified Ethereum Developer</option>
+            </select><br><br>
+
+            <label for="cid">Certificate ID*</label><br>
+            <input type="text" id="cid" name="cid" required placeholder="Certificate ID" size="53"><br><br>
+
+            <label for="name">Candidate Name*</label><br>
+            <input type="text" id="name" name="name" required placeholder="Name" size="53"><br><br>
+
+            <label for="grade">Select Grade*</label><br>
+            <select id="grade" name="grade" required>
+                <option value="S">S</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+            </select><br><br>
+
+            <label for="issueDate">Issue Date*</label><br>
+            <input type="date" id="issueDate" name="issueDate" required><br><br>
+
+            <button type="submit" class="icbutton">Issue Certificate</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function handleButtonClick(event) {
+                event.preventDefault();
+                if (event.target.id === 'homeButton') {
+                    window.location.href = 'index.html';
+                } else if (event.target.id === 'issueButton') {
+                    window.open('issueCertificate.html', '_blank');
+                }
+            }
+
+            function handleFormSubmit(event) {
+                event.preventDefault();
+
+                const formData = new FormData(document.getElementById('issueForm'));
+                const course = formData.get('Course');
+                const certificateId = formData.get('cid').trim();
+                const candidateName = formData.get('name').trim();
+                const grade = formData.get('grade');
+                const issueDate = formData.get('issueDate');
+
+                if (certificateId === '' || candidateName === '') {
+                    alert('Please fill out all required fields.');
+                    return;
+                }
+
+                const certificateData = {
+                    course,
+                    certificateId,
+                    candidateName,
+                    grade,
+                    issueDate
+                };
+
+                localStorage.setItem(certificateId, JSON.stringify(certificateData));
+                alert('Certificate issued successfully!');
+
+                event.target.reset();
+            }
+
+            document.addEventListener('click', function(event) {
+                if (event.target.matches('.button')) {
+                    handleButtonClick(event);
+                }
+            });
+
+            document.getElementById('issueForm').addEventListener('submit', handleFormSubmit);
+        });
+    </script>
+</body>
+</html>

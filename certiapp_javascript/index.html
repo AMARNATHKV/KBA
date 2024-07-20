@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: rgb(236, 235, 235);
+            text-align: center;
+        }
+
+        nav {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: rgb(83, 161, 224);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .navicbutton {
+            background-color: rgb(236, 235, 235);
+            border: none;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .vcbutton {
+            background-color: #15c1d8;
+            border: none;
+            color: white;
+            width: 80px;
+            height: 30px;
+        }
+
+        img {
+            margin-top: 50px;
+            height: 150px;
+            width: 150px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .button {
+                background-color: blueviolet;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <button id="homeButton" class="button">Home</button>
+            <button id="issueButton" class="navicbutton">Issue Certificate</button>
+        </nav>
+    </div>
+
+    <div>
+        <h1>Certificate App</h1>
+        
+        <img src="https://cdn4.iconfinder.com/data/icons/modern-education-3/128/106-256.png" id="certificateImg">
+        <br><br>
+        <form id="searchForm">
+            <input type="text" id="certificateId" name="cid"  placeholder="Enter Certificate ID to View">
+            <button id="searchButton" class="vcbutton">Search</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            function handleButtonClick(event) {
+                event.preventDefault();
+                
+                if (event.target.id === 'homeButton') {
+                    window.location.href = 'index.html'; 
+                } else if (event.target.id === 'issueButton') {
+                    window.open('issueCertificate.html', '_blank'); 
+                } else if (event.target.id === 'searchButton') {
+                    const certificateId = document.getElementById('certificateId').value.trim();
+                    if (certificateId !== '') {
+                        window.open(`viewCertificate.html?id=${certificateId}`, '_blank'); 
+                    } else {
+                        alert('Please enter a Certificate ID.'); 
+                    }
+                }
+            }
+
+            document.addEventListener('click', function(event) {
+                if (event.target.matches('button')) {
+                    handleButtonClick(event); 
+                }
+            });
+        });
+    </script>
+</body>
+</html>
