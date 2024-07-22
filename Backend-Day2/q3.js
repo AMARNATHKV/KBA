@@ -1,42 +1,22 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-
-const app = express();
-
-// Middleware to parse JSON bodies
-app.use(bodyParser.json());
-
-// Mock function to simulate saving the review to the database
-const saveReviewToDatabase = (review) => {
-  console.log('Review saved to database:', review);
-  // In a real application, this function would interact with your database
-};
-
-// Middleware to handle the review submission
-function handleReviewSubmission(req, res) {
-  const { title, content } = req.body;
-
-  // Validate the review data
-  if (!title) {
-    return res.status(400).json({ error: 'Book title is required' });
+const urls = [
+    'https://jsonplaceholder.typicode.com/posts/1',
+    'https://jsonplaceholder.typicode.com/posts/2',
+    'https://jsonplaceholder.typicode.com/posts/3'
+  ];
+  
+  async function fetchUrlsAndLogResponseTimes(urls) {
+    for (const url of urls) {
+      const start = Date.now();
+      try {
+        await fetch(url);
+        const end = Date.now();
+        rtime = end -start
+        console.log(`Response time for ${url}: ${rtime} ms `);
+      } catch (error) {
+        console.error(`Error fetching ${url}:`,url, error);
+      }
+    }
   }
-
-  if (!content) {
-    return res.status(400).json({ error: 'Review content is required' });
-  }
-
-  // Simulate saving the review to the database
-  saveReviewToDatabase({ title, content });
-
-  // Send a success response
-  res.status(201).json({ message: 'Review submitted successfully' });
-}
-
-// POST route to submit a review
-app.post('/submit-review', handleReviewSubmission);
-
-// Start the server
-const port = 3008;
-app.listen(port, () => {
-  console.log(`Server is running `);
-});
+  
+  fetchUrlsAndLogResponseTimes(urls);
+  
