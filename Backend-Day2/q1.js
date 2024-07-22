@@ -1,26 +1,50 @@
-const express = require('express');
-const app = express();
+async function fetchDataWithTimeout(url, timeout) {
+  const controller = new AbortController();
+  const signal = controller.signal;
 
-// Logging middleware function
-function logRequests(req, res, next) {
-  console.log(`${req.method} ${req.url}`);
-  next(); // Pass the request to the next middleware/route handler
+  
+  const timeoutId = setTimeout(() => {
+    controller.abort();
+    console.log('Request timed out');
+  }, timeout);
+
+  try {
+    const response = await fetch(url, { signal });
+
+    // Clear the timeout since the request completed within the timeout period
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    if (error.name === 'AbortError') {
+      console.log('Fetch aborted');
+    } else {
+      console.error('Fetch error:', error.message);
+    }
+    return null;
+  }
 }
 
-// Use the logging middleware for all routes
-app.use(logRequests);
 
-// Sample routes for testing
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+const requestTimeout = 5000; // Timeout in milliseconds
 
-app.post('/submit', (req, res) => {
-  res.send('Form submitted!');
-});
-
-// Start the server
-const port = 3006;
-app.listen(port, () => {
-  console.log(`Server is running `);
-});
+fetchDataWithTimeout(apiUrl, requestTimeout)
+  .then(data => {
+    if (data) {
+      console.log('Data fetched successfully:', data);
+      // Process the fetched data
+    } else {
+      console.log('No data fetched');
+      // Handle case where no data was fetched
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+    
+  });
