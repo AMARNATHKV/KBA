@@ -1,47 +1,31 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-
-const app = express();
-
-// Middleware to parse JSON bodies
-app.use(bodyParser.json());
-
-// Mock function to simulate saving the user to the database
-const saveUserToDatabase = (user) => {
-  console.log('User saved to database:', user);
-  // In a real application, this function would interact with your database
-};
-
-// Validation middleware function
-function validateUserInput(req, res, next) {
-  const { email, password } = req.body;
-
-  if (!email) {
-    return res.status(400).json({ error: 'Email is required' });
-  }
-
-  if (!password) {
-    return res.status(400).json({ error: 'Password is required' });
-  }
-
-  next(); // Pass the request to the next middleware/route handler
+async function doubleNumberWithDelay(number) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(number * 2);
+    }, 1000); // Simulated delay of 1 second
+  });
 }
 
-// Registration processing middleware function
-function processRegistration(req, res) {
-  const { email, password } = req.body;
-
-  // Simulate saving the user to the database
-  saveUserToDatabase({ email, password });
-
-  res.status(201).json({ message: 'User registered successfully' });
+async function processArrayWithDelay(numbers) {
+  const doubledNumbers = [];
+  for (let number of numbers) {
+    const doubled = await doubleNumberWithDelay(number);
+    doubledNumbers.push(doubled);
+  }
+  return doubledNumbers;
 }
 
-// Registration route using chained middleware
-app.post('/register', validateUserInput, processRegistration);
 
-// Start the server
-const port = 3007;
-app.listen(port, () => {
-  console.log(`Server is running `);
-});
+async function main() {
+  const numbers = [1, 2, 3, 4, 5];
+  console.log(`Original array: ${numbers}`);
+
+  try {
+    const doubledNumbers = await processArrayWithDelay(numbers);
+    console.log(`Doubled array with delay: ${doubledNumbers}`);
+  } catch (error) {
+    console.error('Error processing array:', error);
+  }
+}
+
+main();
