@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Task Details - TaskNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<nav class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-4">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div>
+            <a href="home.html" target="_blank" class="text-xl font-bold">TaskNest</a>
+        </div>
+        <div>
+            <ul class="flex space-x-4">
+                <li><a href="home.html" target="_blank" class="hover:text-gray-200">Home</a></li>
+                <li><a href="dashboard.html" class="hover:text-gray-200">Dashboard</a></li>
+                <li><a href="task.html" class="hover:text-gray-200">Tasks</a></li>
+                <li><a href="collaboration.html" target="_blank" class="hover:text-gray-200">Collaboration Team</a></li>
+                <li><a href="report.html" class="hover:text-gray-200">Reports</a></li>
+                <li><a href="login.html " target="_blank" class="hover:text-gray-200">Login</a></li>
+                    <li><a href="signIn.html" target="_blank" class="hover:text-gray-200">Register</a></li>
+                <li><a href="contactus.html" class="hover:text-gray-200">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <header class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-gray-800">Task Details</h1>
+            </div>
+        </header>
+        <main class="p-6">
+        
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">Task Title</h2>
+                    <p class="text-gray-600 mb-4">Description of the task goes here. </p>
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 text-xs font-semibold rounded-full">In Progress</span>
+                        <span class="text-gray-500 ml-2">Due Date: 2024-07-10</span>
+                    </div>
+
+                    <div class="border-t border-gray-200 mt-4 pt-4">
+                    
+                        <div class="flex items-start mb-4">
+                            <img src="images/avatar.png" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="text-gray-800 font-semibold">John Doe</p>
+                                <p class="text-gray-600">Comment text goes here.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bg-gray-100 px-6 py-4 mt-auto flex justify-end">
+                    <a href="dashboard.html" target="_blank" class="text-blue-500 hover:underline">Back to Dashboard</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Collaboration - TaskNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div>
+                <a href="home.html" target="_blank" class="text-xl font-bold">TaskNest</a>
+            </div>
+            <div>
+                <ul class="flex space-x-4">
+                    <li><a href="home.html" target="_blank" class="hover:text-gray-200">Home</a></li>
+                    <li><a href="dashboard.html" target="_blank" class="hover:text-gray-200">Dashboard</a></li>
+                    <li><a href="task.html" target="_blank" class="hover:text-gray-200">Tasks</a></li>
+                    <li><a href="collaboration.html" target="_blank" class="hover:text-gray-200">Collaboration Team</a></li>
+                    <li><a href="report.html" target="_blank" class="hover:text-gray-200">Reports</a></li>
+                    <li><a href="login.html " target="_blank" class="hover:text-gray-200">Login</a></li>
+                    <li><a href="signIn.html" target="_blank" class="hover:text-gray-200">Register</a></li>
+                    <li><a href="contactus.html" target="_blank" class="hover:text-gray-200">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class=" mx-auto py-12">
+        <header class="bg-white shadow-md mb-8">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-gray-800">Task Collaboration</h1>
+                <a href="addComment.html" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg">Add Comment</a>
+            </div>
+        </header>
+
+        <main class="container mx-auto">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Task Title</h2>
+                    <p class="text-gray-600 mb-6">Description of the task goes here.</p>
+
+                    <div class="space-y-6">
+                        
+                        <div class="flex items-start">
+                            <img src="images/avatar.png" alt="User Avatar" class="w-12 h-12 rounded-full mr-4">
+                            <div class="bg-gray-100 p-4 rounded-lg shadow-md flex-1">
+                                <p class="text-gray-800 font-semibold">John Doe</p>
+                                <p class="text-gray-600">Comment text goes here.</p>
+                                <span class="text-gray-500 text-xs">Commented on: 2024-07-10</span>
+                                
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded-md mt-2">Reply</button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <img src="images/avatar.png" alt="" class="w-12 h-12 rounded-full mr-4">
+                            <div class="bg-gray-100 p-4 rounded-lg shadow-md flex-1">
+                                <p class="text-gray-800 font-semibold">Jane Smith</p>
+                                <p class="text-gray-600">Another comment text goes here.</p>
+                                <span class="text-gray-500 text-xs">Commented on: 2024-07-09</span>
+
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-4 rounded-md mt-2">Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Task Assignment</h3>
+                        <form class="flex items-center space-x-4">
+                            <label for="assignee" class="font-semibold">Assign to:</label>
+                            <select name="assignee" id="assignee" class="px-4 py-2 bg-gray-100 rounded-lg">
+                                <option value="john-doe">John Doe</option>
+                                <option value="jane-smith">Jane Smith</option>
+                                
+                            </select>
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">Assign Task</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

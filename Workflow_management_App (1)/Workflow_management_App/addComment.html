@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Comment - TaskNest</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div>
+                <a href="home.html" target="_blank" class="text-xl font-bold">TaskNest</a>
+            </div>
+            <div>
+                <ul class="flex space-x-4">
+                    <li><a href="home.html" target="_blank" class="hover:text-gray-200">Home</a></li>
+                    <li><a href="dashboard.html" target="_blank" class="hover:text-gray-200">Dashboard</a></li>
+                    <li><a href="task.html" target="_blank" class="hover:text-gray-200">Tasks</a></li>
+                    <li><a href="collaboration.html" target="_blank" class="hover:text-gray-200">Collaboration Team</a></li>
+                    <li><a href="report.html" target="_blank" class="hover:text-gray-200">Reports</a></li>
+                    <li><a href="login.html " target="_blank" class="hover:text-gray-200">Login</a></li>
+                    <li><a href="signIn.html" target="_blank" class="hover:text-gray-200">Register</a></li>
+                    <li><a href="contactus.html" target="_blank" class="hover:text-gray-200">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Add Comment</h1>
+            <a href="task.html" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg">Back to Task</a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
+        <form >
+            <div class="mb-6">
+                <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
+            </div>
+            <div class="mb-6">
+                <label for="comment" class="block text-sm font-medium text-gray-700">Comment</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Enter your comment here..." class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required></textarea>
+            </div>
+            <div class="flex items-center justify-end">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Submit Comment</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>
